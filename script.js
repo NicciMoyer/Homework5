@@ -32,28 +32,24 @@ function insertNote  () {
     $("#centerCol").empty();
 
     for (var i = 0; i < notes.length; i++) {
-
       var a = $("<button>");
- 
       a.addClass("");
-    
       a.attr("data-name", notes[i]);
-     
       a.text(notes[i]);
-   
       $("#centerCol").append(a);
     }
   }
 
   $("#add-note").on("click", function(event) {
-
     event.preventDefault();
-
     var note = $("#note-input").val().trim();
-
     notes.push(note);
-
     insertNote ();
   });
 
   insertNote ();
+  
+
+//   saveBtn.addEventListener("click", function() {
+//   note-input.textContent = note;
+//   localStorage.setItem("note", note);}
